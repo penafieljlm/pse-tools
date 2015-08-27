@@ -1,2 +1,2 @@
-# pse-tools
-Personal collection of scripts dealing with the Philippine Stock Exchange
+# PSE Tools (pse-tools)
+A Collection of Programs and Scripts Involving the Philippine Stock Exchange
