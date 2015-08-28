@@ -38,22 +38,20 @@ The pse-quotes.py script does not read anything from Standard Input.
 #### Output
 The pse-quotes.py script dumps the following onto Standard Output upon completion:
 ```
-    {
-        "status": <status-code>,
-        "data": [
-            {
-                "name": "<stock-name>",
-                "price_close": "<closing-price>",
-                "price_high": "<high-price>",
-                "price_low": "<low-price>",
-                "price_open": "<opening-price>",
-                "quote_date": "<yyyy-mm-dd>",
-                "symbol": "<stock-symbol>",
-                "volume": <trade-volume>
-            }
-        ]
-    }
+    [
+        {
+            "name": "<stock-name>",
+            "price_close": "<closing-price>",
+            "price_high": "<high-price>",
+            "price_low": "<low-price>",
+            "price_open": "<opening-price>",
+            "quote_date": "<yyyy-mm-dd>",
+            "symbol": "<stock-symbol>",
+            "volume": <trade-volume>
+        }
+    ]
 ```
+See http://openpse.com/api/quotes/ for more information.
 
 #### Use Cases
 Some example use cases of the pse-quotes.py script are as follows:
