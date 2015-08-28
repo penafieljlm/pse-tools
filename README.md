@@ -1,8 +1,8 @@
 # PSE Tools (pse-tools)
 A collection of useful Python scripts involving the Philippine Stock Exchange.
 
-## Tools
-The list of tools included in this collection are as follows:
+## Scripts
+The list of scripts included in this collection are as follows:
 
 ### pse-quotes.py
 Python Script which retrieves PSE stock quotes from the Open PSE Initiative.
