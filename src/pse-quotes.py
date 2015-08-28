@@ -3,6 +3,27 @@
 """
     Python Script which retrieves PSE stock quotes from the Open PSE Initiative.
     See http://openpse.com/ for more information.
+    
+    Usage
+        pse-quotes.py <stocks> --start <YYYY-MM-DD> --end <YYYY-MM-DD>
+        
+    Output
+        {
+            "status": <status-code>,
+            "data": [
+                {
+                    "name": "<stock-name>",
+                    "price_close": "<closing-price>",
+                    "price_high": "<high-price>",
+                    "price_low": "<low-price>",
+                    "price_open": "<opening-price>",
+                    "quote_date": "<yyyy-mm-dd>",
+                    "symbol": "<stock-symbol>",
+                    "volume": <trade-volume>
+                }
+            ]
+        }
+
 """
 __author__ = "John Lawrence M. Penafiel"
 __copyright__ = "Copyright 2015, John Lawrence M. Penafiel"
@@ -25,15 +46,15 @@ if __name__ == "__main__":
             raise argparse.ArgumentTypeError("%s is an invalid date value" % value)
     # parse arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('stock',
-                        help='the symbol of the stock to retrieve')
+    parser.add_argument('stocks',
+                        help='the symbols of the stocks to retrieve, separated by commas')
     parser.add_argument('-s', '--start',
                         type=date,
-                        help='[YYYY-MM-DD] the start date of the information to be retrieved',
+                        help='[yyyy-mm-dd] the start date of the information to be retrieved',
                         default=datetime.date(1900, 1, 1).__str__())
     parser.add_argument('-e', '--end',
                         type=date,
-                        help='[YYYY-MM-DD] the end date of the information to be retrieved',
+                        help='[yyyy-mm-dd] the end date of the information to be retrieved',
                         default=datetime.date.today().__str__())
     args = parser.parse_args()
     # prepare request url
@@ -42,7 +63,8 @@ if __name__ == "__main__":
     response = requests.get(query)
     # prepare results
     results = {
-        'status': response.status_code
+        'status': response.status_code,
+        'data': []
     }
     if response.status_code == 200:
         results['data'] = json.loads(response.text)
