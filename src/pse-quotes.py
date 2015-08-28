@@ -5,9 +5,12 @@
     See http://openpse.com/ for more information.
     
     Usage
+    ```
         pse-quotes.py <stocks> --start <YYYY-MM-DD> --end <YYYY-MM-DD>
+    ```
         
     Output
+    ```
         {
             "status": <status-code>,
             "data": [
@@ -23,7 +26,7 @@
                 }
             ]
         }
-
+    ```
 """
 __author__ = "John Lawrence M. Penafiel"
 __copyright__ = "Copyright 2015, John Lawrence M. Penafiel"
