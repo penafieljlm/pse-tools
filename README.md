@@ -36,7 +36,7 @@ The pse-quotes.py script takes in the following Command-Line arguments:
 The pse-quotes.py script does not read anything from Standard Input.
     
 #### Output
-The pse-quotes.py script dumps the following onto Standard Output upon completion:
+The pse-quotes.py script dumps the following onto the Standard Output upon completion:
 ```
     [
         {
@@ -51,6 +51,7 @@ The pse-quotes.py script dumps the following onto Standard Output upon completio
         }
     ]
 ```
+If the script fails, nothing is dumped onto the Standard Output.
 See http://openpse.com/api/quotes/ for more information.
 
 #### Use Cases
