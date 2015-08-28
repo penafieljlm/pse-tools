@@ -1,5 +1,5 @@
 # PSE Tools (pse-tools)
-A Collection of Programs and Scripts Involving the Philippine Stock Exchange.
+A collection of useful Python scripts involving the Philippine Stock Exchange.
 
 ## Tools
 The list of tools included in this collection are as follows:
