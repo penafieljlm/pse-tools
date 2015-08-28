@@ -10,7 +10,7 @@ See http://openpse.com/ for more information.
 
 Usage
 ```
-    pse-quotes.py <stocks> --start <YYYY-MM-DD> --end <YYYY-MM-DD>
+    pse-quotes.py <stocks> --start <yyyy-mm-dd> --end <yyyy-mm-dd>
 ```
     
 Output
