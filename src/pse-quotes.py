@@ -53,11 +53,11 @@ if __name__ == "__main__":
                         help='the symbols of the stocks to retrieve, separated by commas')
     parser.add_argument('-s', '--start',
                         type=date,
-                        help='[yyyy-mm-dd] the start date of the information to be retrieved',
+                        help='[yyyy-mm-dd] retrieve quotes beginning from this date',
                         default=datetime.date(1900, 1, 1).__str__())
     parser.add_argument('-e', '--end',
                         type=date,
-                        help='[yyyy-mm-dd] the end date of the information to be retrieved',
+                        help='[yyyy-mm-dd] retrieve quotes up until this date',
                         default=datetime.date.today().__str__())
     args = parser.parse_args()
     # prepare request url
