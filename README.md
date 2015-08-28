@@ -11,13 +11,19 @@ See http://openpse.com/ for more information.
 #### Usage
 The pse-quotes.py script is invoked in the following manner:
 ```
-    pse-quotes.py <stocks> --start <yyyy-mm-dd> --end <yyyy-mm-dd>
+    pse-quotes.py --stocks <stocks> --start <yyyy-mm-dd> --end <yyyy-mm-dd>
 ```
+It can also be invoked in the following manner:
+```
+    pse-quotes.py -s <stocks> -st <yyyy-mm-dd> -ed <yyyy-mm-dd>
+```
+
 #### Arguments
 The pse-quotes.py script takes in the following Command-Line arguments:
 ```
-    stocks: required, string
+    stocks: optional, string, default=None
         The symbols of the stocks to retrieve, separated by commas.
+        Simply not providing this option will mean that all stocks are to be selected.
     start: optional, string, default='1900-01-01'
         Retrieve quotes beginning from this date.
         This date should be in yyyy-mm-dd format.
@@ -47,6 +53,30 @@ The pse-quotes.py script dumps the following onto Standard Output upon completio
             }
         ]
     }
+```
+
+#### Use Cases
+Some example use cases of the pse-quotes.py script are as follows:
+
+* Get All Stock Quotes
+```
+    pse-quotes.py
+```
+* Get All Stock Quotes for BDO and BPI
+```
+    pse-quotes.py --stocks BDO,BPI
+```
+* Get All Stock Quotes for BDO since March 06, 2008
+```
+    pse-quotes.py --stocks BDO --start 2008-03-06
+```
+* Get All Stock Quotes for BPI up until August 21, 2012
+```
+    pse-quotes.py --stocks BPI --end 2012-08-21
+```
+* Get All Stock Quotes since September 2, 2010
+```
+    pse-quotes.py --stocks BPI --start 2010-09-02
 ```
 
 ## Development Notes
