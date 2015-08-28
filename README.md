@@ -8,12 +8,12 @@ The list of tools included in this collection are as follows:
 Python Script which retrieves PSE stock quotes from the Open PSE Initiative.
 See http://openpse.com/ for more information.
 
-Usage
+#### Usage
 ```
     pse-quotes.py <stocks> --start <yyyy-mm-dd> --end <yyyy-mm-dd>
 ```
     
-Output
+#### Output
 ```
     {
         "status": <status-code>,
