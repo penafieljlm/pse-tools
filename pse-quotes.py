@@ -25,19 +25,25 @@ if __name__ == "__main__":
             raise argparse.ArgumentTypeError("%s is an invalid date value" % value)
     # parse arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('stocks',
-                        help='the symbols of the stocks to retrieve, separated by commas')
-    parser.add_argument('-s', '--start',
+    parser.add_argument('-s', '--stocks',
+                        help='the symbols of the stocks to retrieve, separated by commas',
+                        default=None)
+    parser.add_argument('-st', '--start',
                         type=date,
                         help='[yyyy-mm-dd] retrieve quotes beginning from this date',
                         default=datetime.date(1900, 1, 1).__str__())
-    parser.add_argument('-e', '--end',
+    parser.add_argument('-ed', '--end',
                         type=date,
                         help='[yyyy-mm-dd] retrieve quotes up until this date',
                         default=datetime.date.today().__str__())
     args = parser.parse_args()
     # prepare request url
-    query = 'http://openpse.com/api/quotes/?stocks={stock}&from_date={start}&to_date={end}'.format(stock=args.stock, start=args.start, end=args.end)
+    params = []
+    if args.stocks is not None:
+        params.append('stocks={stocks}'.format(stocks=args.stocks))
+    params.append('from_date={start}'.format(start=args.start))
+    params.append('to_date={end}'.format(end=args.end))
+    query = 'http://openpse.com/api/quotes/?{params}'.format(params='&'.join(params))
     # perform actual request
     response = requests.get(query)
     # prepare results
