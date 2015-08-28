@@ -28,11 +28,11 @@ if __name__ == "__main__":
     parser.add_argument('-s', '--stocks',
                         help='the symbols of the stocks to retrieve, separated by commas',
                         default=None)
-    parser.add_argument('-st', '--start',
+    parser.add_argument('-f', '--from',
                         type=date,
                         help='[yyyy-mm-dd] retrieve quotes beginning from this date',
                         default=datetime.date(1900, 1, 1).__str__())
-    parser.add_argument('-ed', '--end',
+    parser.add_argument('-t', '--to',
                         type=date,
                         help='[yyyy-mm-dd] retrieve quotes up until this date',
                         default=datetime.date.today().__str__())

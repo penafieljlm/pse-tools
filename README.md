@@ -11,11 +11,11 @@ See http://openpse.com/ for more information.
 #### Usage
 The pse-quotes.py script is invoked in the following manner:
 ```
-    pse-quotes.py --stocks <stocks> --start <yyyy-mm-dd> --end <yyyy-mm-dd>
+    pse-quotes.py --stocks <stocks> --from <yyyy-mm-dd> --to <yyyy-mm-dd>
 ```
 It can also be invoked in the following manner:
 ```
-    pse-quotes.py -s <stocks> -st <yyyy-mm-dd> -ed <yyyy-mm-dd>
+    pse-quotes.py -s <stocks> -f <yyyy-mm-dd> -t <yyyy-mm-dd>
 ```
 
 #### Arguments
@@ -67,15 +67,15 @@ Some example use cases of the pse-quotes.py script are as follows:
 ```
 * Get All Stock Quotes for BDO since March 06, 2008
 ```
-    pse-quotes.py --stocks BDO --start 2008-03-06
+    pse-quotes.py --stocks BDO --from 2008-03-06
 ```
 * Get All Stock Quotes for BPI up until August 21, 2012
 ```
-    pse-quotes.py --stocks BPI --end 2012-08-21
+    pse-quotes.py --stocks BPI --to 2012-08-21
 ```
 * Get All Stock Quotes since September 2, 2010
 ```
-    pse-quotes.py --stocks BPI --start 2010-09-02
+    pse-quotes.py --stocks BPI --from 2010-09-02
 ```
 
 ## Development Notes
