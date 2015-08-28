@@ -78,5 +78,13 @@ if __name__ == "__main__":
             'slope': slope,
             'age': age
         }
+    # format results into a csv friendly format
+    results = []
+    for quote in trend:
+        results.append({
+                       'symbol': quote,
+                       'slope': quote['slope'],
+                       'age': quote['age']
+                       })
     # dump results
-    print json.dumps(trends, sort_keys=True, indent=4, separators=(',', ': '))
+    print json.dumps(results, sort_keys=True, indent=4, separators=(',', ': '))
