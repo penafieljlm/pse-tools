@@ -46,12 +46,6 @@ if __name__ == "__main__":
     query = 'http://openpse.com/api/quotes/?{params}'.format(params='&'.join(params))
     # perform actual request
     response = requests.get(query)
-    # prepare results
-    results = {
-        'status': response.status_code,
-        'data': []
-    }
+    # dump results
     if response.status_code == 200:
-        results['data'] = json.loads(response.text)
-    # dump output
-    print json.dumps(results, sort_keys=True, indent=4, separators=(',', ': '))
+        print json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(',', ': '))
