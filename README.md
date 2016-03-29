@@ -1,4 +1,4 @@
-# PSE Tools (pse-edools)
+# PSE Tools (pse-tools)
 A collection of useful Python scripts involving the Philippine Stock Exchange.
 
 ## Scripts
@@ -85,7 +85,7 @@ This project is being implemented using Python.
 * Open PSE Initiative: An open-source project which aims to store end-of-day quotes from the Philippines Stock Exchange and make it available to the public through a REST API. See http://openpse.com/ for more information.
 
 ## Author(s)
-* Peñafiel, John Lawrence M. (https://github.com/penafieljlm/)
+* PeÃ±afiel, John Lawrence M. (https://github.com/penafieljlm/)
 
 ## Contact
 Contact me at penafieljlm@gmail.com for any questions or concerns.
