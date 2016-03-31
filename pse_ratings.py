@@ -34,4 +34,4 @@ if __name__ == '__main__':
 	period = sys.argv[1]
 	for stock in sys.stdin:
 		stock = stock.strip()
-		print pse_rating.rating(stock, period)
+		print stock + " : " + pse_rating.rating(stock, period)
