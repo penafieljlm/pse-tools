@@ -81,6 +81,10 @@ Some example use cases of the pse_quotes.py script are as follows:
 ## Development Notes
 This project is being implemented using Python.
 
+## Future Ideas
+* Chrome/Firefox Extension which shows stock rating in your COL Financial Dashboard
+* Computed recommended stock to be purchased next in COL based on rating, board lot, current cash, and stocks currently on hand (for diversitifcation purposes)
+
 ## References
 * Open PSE Initiative: An open-source project which aims to store end-of-day quotes from the Philippines Stock Exchange and make it available to the public through a REST API. See http://openpse.com/ for more information.
 
